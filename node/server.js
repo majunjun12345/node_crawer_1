@@ -101,7 +101,7 @@ function filterChapters(html) {
         }
         videos.each(function() {
             var video = $(this)
-            var videoTitle = video.find('.J-media-item').text().replace(/[\n]/g, "").replace(/\ +/g, "")
+            var videoTitle = video.find('.J-media-item').text().replace(/[\n]/g, "").replace(/\ +/g, "").split('(')[0]
             var id = video.attr('data-media-id')
             chapterData.videos.push({
                 title: videoTitle,
